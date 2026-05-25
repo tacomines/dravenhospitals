@@ -19,7 +19,7 @@ export default function FloatingButtons() {
       </a>
 
       <a
-        href="https://wa.me/918050399886"
+        href="https://wa.me/918050399886?text=Hello%20Draven%20Hospitals,%20I%20visited%20your%20website%20and%20would%20like%20healthcare%20assistance.%20Please%20share%20consultation%20and%20service%20details."
         target="_blank"
         rel="noopener noreferrer"
         className={`${styles.button} ${styles.whatsapp}`}
