@@ -1,56 +1,67 @@
+import Image from "next/image";
+
 import styles from "./ServicesSection.module.css";
 
 const services = [
   {
-    title: "Sugar",
+    title: "Diabetic ",
+    image: "/images/services/sugar.jpg",
     description:
       "Diabetes consultation, monitoring, and ongoing healthcare support.",
   },
 
   {
     title: "Hypertension",
+    image: "/images/services/hypertension.jpg",
     description:
       "Blood pressure management and preventive healthcare guidance.",
   },
 
   {
     title: "Thyroid",
+    image: "/images/services/thyroid.jpg",
     description:
       "Diagnosis, monitoring, and thyroid disorder treatment support.",
   },
 
   {
     title: "Gynecology",
+    image: "/images/services/gynecology.jpg",
     description:
       "Women’s healthcare consultations and routine medical support.",
   },
 
   {
-    title: "Ortho",
+    title: "Orthopedic",
+    image: "/images/services/ortho.jpg",
     description:
       "Orthopedic consultations for joint, muscle, and bone-related care.",
   },
 
   {
     title: "Neurology",
+    image: "/images/services/neurology.jpg",
     description:
       "Neurological consultation and healthcare evaluation support.",
   },
 
   {
     title: "Pediatric",
+    image: "/images/services/pediatric.jpg",
     description:
       "Child healthcare services including all types of vaccinations.",
   },
 
   {
     title: "Home Visits",
+    image: "/images/services/home-visits.jpg",
     description:
       "Doctor consultation and healthcare support at home when needed.",
   },
 
   {
     title: "Diagnostics",
+    image: "/images/services/diagnostics.jpg",
     description:
       "Routine medical tests and diagnostic healthcare services.",
   },
@@ -81,13 +92,21 @@ export default function ServicesSection() {
               key={service.title}
               className={styles.card}
             >
-              <div className={styles.icon}>
-                +
+              <div className={styles.imageWrapper}>
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  width={400}
+                  height={300}
+                  className={styles.image}
+                />
               </div>
 
-              <h3>{service.title}</h3>
+              <div className={styles.content}>
+                <h3>{service.title}</h3>
 
-              <p>{service.description}</p>
+                <p>{service.description}</p>
+              </div>
             </div>
           ))}
         </div>

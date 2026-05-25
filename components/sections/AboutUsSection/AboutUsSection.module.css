@@ -43,15 +43,25 @@
 }
 
 .subtitle {
-  display: inline-block;
+  display: inline-flex;
 
-  margin-bottom: 1rem;
+  align-items: center;
 
-  color: #ef4444;
+  justify-content: center;
 
-  font-size: 0.95rem;
+  padding: 0.8rem 1.4rem;
+
+  border-radius: 999px;
+
+  background: rgba(37, 99, 235, 0.1);
+
+  color: #2563eb;
+
+  font-size: 0.85rem;
 
   font-weight: 700;
+
+  margin-bottom: 1.5rem;
 
   letter-spacing: 0.08em;
 

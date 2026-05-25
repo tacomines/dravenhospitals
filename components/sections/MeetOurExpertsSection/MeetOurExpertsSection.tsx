@@ -1,9 +1,9 @@
 import styles from "./MeetOurExpertsSection.module.css";
 
 const doctors = [
-  "Dr. John Smith",
-  "Dr. Sarah Wilson",
-  "Dr. Michael Brown",
+  "Dr. Praneeth Kumar",
+  "Dr. Y Soujanya",
+  "Dr. Rajasekhar Reddy",
 ];
 
 export default function MeetOurExpertsSection() {

@@ -58,9 +58,29 @@
 .bottom {
   padding-top: 2rem;
 
-  text-align: center;
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 1rem;
 
   color: rgba(255,255,255,0.5);
+
+  font-size: 0.95rem;
+}
+
+.bottom a {
+  color: rgba(255,255,255,0.7);
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.bottom a:hover {
+  color: #ffffff;
 }
 
 @media (max-width: 992px) {

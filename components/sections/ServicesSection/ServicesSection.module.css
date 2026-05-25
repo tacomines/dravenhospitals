@@ -1,7 +1,11 @@
 .servicesSection {
-  padding: 6rem 1.5rem;
+  position: relative;
+
+  padding: 7rem 1.5rem;
 
   background: #f8fafc;
+
+  overflow: hidden;
 }
 
 .container {
@@ -10,106 +14,266 @@
   margin: 0 auto;
 }
 
-.header {
-  text-align: center;
+/* ========================= */
+/* HEADER */
+/* ========================= */
 
-  margin-bottom: 4rem;
+.header {
+  max-width: 760px;
+
+  margin: 0 auto 5rem;
+
+  text-align: center;
 }
 
 .subtitle {
-  display: inline-block;
-
-  margin-bottom: 1rem;
-
-  color: #ef4444;
-
-  font-weight: 700;
-
-  text-transform: uppercase;
-
-  letter-spacing: 0.08em;
-}
-
-.title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-
-  color: #0f172a;
-}
-
-.grid {
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 2rem;
-}
-
-.card {
-  padding: 2rem;
-
-  border-radius: 2rem;
-
-  background: #ffffff;
-
-  border: 1px solid #e2e8f0;
-
-  transition: 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-}
-
-.icon {
-  width: 60px;
-
-  height: 60px;
-
-  border-radius: 1rem;
-
-  background: #ef4444;
-
-  color: #ffffff;
-
-  display: flex;
+  display: inline-flex;
 
   align-items: center;
 
   justify-content: center;
 
+  padding: 0.8rem 1.5rem;
+
   margin-bottom: 1.5rem;
 
-  font-size: 1.5rem;
+  border-radius: 999px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  color: #2563eb;
+
+  font-size: 0.85rem;
 
   font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
 }
 
-.card h3 {
-  font-size: 1.4rem;
+.title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
 
-  margin-bottom: 1rem;
+  line-height: 1.08;
+
+  letter-spacing: -0.04em;
 
   color: #0f172a;
+
+  margin-bottom: 1.5rem;
 }
 
-.card p {
-  color: #475569;
+.header::after {
+  content: "Reliable healthcare support with consultations, diagnostics, vaccinations, and compassionate patient care.";
 
-  line-height: 1.8;
+  display: block;
+
+  max-width: 720px;
+
+  margin: 0 auto;
+
+  font-size: 1.05rem;
+
+  line-height: 1.9;
+
+  color: #64748b;
 }
+
+/* ========================= */
+/* GRID */
+/* ========================= */
+
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 2rem;
+}
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+.card {
+  position: relative;
+
+  display: flex;
+
+  align-items: stretch;
+
+  overflow: hidden;
+
+  border-radius: 2rem;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid rgba(226, 232, 240, 0.9);
+
+  backdrop-filter: blur(12px);
+
+  transition: all 0.35s ease;
+
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.04);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(37, 99, 235, 0.15);
+
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+}
+
+/* ========================= */
+/* IMAGE */
+/* ========================= */
+
+.imageWrapper {
+  width: 40%;
+
+  min-width: 40%;
+
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.45s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.06);
+}
+
+/* ========================= */
+/* CONTENT */
+/* ========================= */
+
+.content {
+  width: 60%;
+
+  padding: 2rem;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.content h3 {
+  font-size: 1.45rem;
+
+  font-weight: 700;
+
+  color: #0f172a;
+
+  margin-bottom: 1rem;
+}
+
+.content p {
+  color: #64748b;
+
+  line-height: 1.9;
+
+  font-size: 0.98rem;
+}
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
 
 @media (max-width: 992px) {
+  .servicesSection {
+    padding: 6rem 1.5rem;
+  }
+
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 3rem;
   }
 }
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
 
 @media (max-width: 768px) {
   .servicesSection {
     padding: 5rem 1.25rem;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
+  .header {
+    margin-bottom: 3.5rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .header::after {
+    font-size: 1rem;
+
+    line-height: 1.8;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .imageWrapper {
+    width: 100%;
+
+    min-width: 100%;
+  }
+
+  .image {
+    height: 240px;
+  }
+
+  .content {
+    width: 100%;
+
+    padding: 1.5rem;
+  }
+}
+
+/* ========================= */
+/* SMALL MOBILE */
+/* ========================= */
+
+@media (max-width: 480px) {
+  .servicesSection {
+    padding: 4rem 1rem;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .image {
+    height: 220px;
+  }
+
+  .content h3 {
+    font-size: 1.3rem;
+  }
+
+  .content p {
+    font-size: 0.95rem;
   }
 }

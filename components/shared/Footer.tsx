@@ -32,14 +32,24 @@ export default function Footer() {
 
             <p>info@dravenhospitals.com</p>
 
-            <p>Hyderabad, India</p>
+            <p>Beeramguda, Hyderabad, India</p>
           </div>
         </div>
 
-        <div className={styles.bottom}>
+      <div className={styles.bottom}>
+        <p>
           © 2026 Draven Hospitals. All rights
           reserved.
-        </div>
+        </p>
+
+        <a
+          href="https://tacovex.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Design & Developed by Tacovex
+        </a>
+      </div>
       </div>
     </footer>
   );
