@@ -201,7 +201,7 @@
 
   border-radius: 999px;
 
-  background: #25d366;
+  background: #2563eb;
 
   color: #ffffff;
 
@@ -215,7 +215,7 @@
 .formCard button:hover {
   transform: translateY(-3px);
 
-  background: #1ebe5d;
+  background: #b91c1c;
 }
 
 /* ========================= */

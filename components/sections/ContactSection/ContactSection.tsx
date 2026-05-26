@@ -70,20 +70,40 @@ export default function ContactSection() {
           </div>
 
           {/* RIGHT MAP */}
-          <a
-            href="https://www.google.com/maps/place/Draven+Hospitals/@17.517756,78.308728,15z"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.mapWrapper}
-          >
-            <iframe
-              src="https://www.google.com/maps?q=17.517756,78.308728&z=15&output=embed"
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-              className={styles.map}
-            ></iframe>
-          </a>
+          <div className={styles.mapContainer}>
+            <a
+              href="https://maps.app.goo.gl/u1nKk4S5CzZzCUiu5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.mapWrapper}
+            >
+              <iframe
+                src="https://maps.google.com/maps?q=Draven%20Hospitals%20Beeramguda&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                className={styles.map}
+              ></iframe>
+            </a>
+
+            {/* SHARE BUTTON */}
+            <button
+              className={styles.shareButton}
+              onClick={() => {
+                const message =
+                  "Draven Hospitals Location:\nhttps://maps.app.goo.gl/u1nKk4S5CzZzCUiu5";
+
+                window.open(
+                  `https://wa.me/?text=${encodeURIComponent(
+                    message
+                  )}`,
+                  "_blank"
+                );
+              }}
+            >
+              Share Location
+            </button>
+          </div>
         </div>
       </div>
     </section>
